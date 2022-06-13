@@ -29,16 +29,6 @@ void Contact::get_contact(int i)
 		std::cout << this->get_nickname().substr(0, 9) << ".|" << std::endl;
 	else
 		std::cout << std::setw(10) << this->get_nickname() << "|" << std::endl;
-	// //phonenumber
-	// if (this->get_phonenumber().size() > 10)
-	// 	std::cout << this->get_phonenumber().substr(0, 9) << ".|";
-	// else
-	// 	std::cout << std::setw(10) << this->get_phonenumber() << "|";
-	// //secret
-	// if (this->get_secret().size() > 10)
-	// 	std::cout << this->get_secret().substr(0, 9) << ".|";
-	// else
-	// 	std::cout << std::setw(10) << this->get_secret() << "|";
 }
 
 void Contact::get_info()

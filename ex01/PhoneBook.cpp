@@ -10,7 +10,6 @@ PhoneBook::~PhoneBook()
 
 };
 
-//name it search
 void PhoneBook::search_contact()
 {
 	int i;
@@ -24,18 +23,24 @@ void PhoneBook::search_contact()
 	else
 	{
 		std::cout <<"|    INDEX |      NAME|   SIRNAME|  NICKNAME|" << std::endl;
-		//std::cout << "i: " << i << std::endl << "num: " << num_contacts << std::endl;
 		while (i < 8)
 		{
 			_contacts[i].get_contact(i);
 			i++;
 		}
-		std::cout << std::endl << "For which one are you searching?" << std::endl;
-		std::cin >> input;
-		if (input <= num_contacts)
-			_contacts[input].get_info();
-		else
-			std::cout << "Wrong input. Please enter a valid index." << std::endl;
+		i = 1;
+		while (i == 1)
+		{
+			std::cout << std::endl << "For which one are you searching?" << std::endl;
+			std::cin >> input;
+			if (input <= num_contacts - 1)
+			{
+				_contacts[input].get_info();
+				i = 0;
+			}
+			else
+				std::cout << "Wrong input. Please enter a valid index." << std::endl;
+		}
 
 	}
 }

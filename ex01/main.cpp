@@ -18,7 +18,7 @@ int main()
 
 	std::cout << "            _            _.,----," << std::endl << " __  _.-._ / '-.        -  ,._  \\) " << std::endl << "|  `-)_   '-.   \\       / < _ )/\" }" << std::endl << "/__    '-.   \\   '-, ___(c-(6)=(6)" << std::endl << " , `'.    `._ '.  _,'   >\\    \"  )" << std::endl << " :;;,,'-._   '---' (  ( \"/`. -='/" << std::endl << ";:;;:;;,  '..__    ,`-.`)'- '--'" << std::endl << ";';:;;;;;'-._ /'._|   Y/   _/' \\" << std::endl << "      '''\"._ F    |  _/ _.'._   `\\" << std::endl << "             L    \\   \\/     '._  \\" << std::endl << "      .-,-,_ |     `.  `'---,  \\_ _|" << std::endl << "      //    'L    /  \\,   (\"--',=`)7" << std::endl << "     | `._       : _,  \\  /'`-._L,_'-._" << std::endl << "     '--' '-.\\__/ _L   .`'         './/" << std::endl << "                 [ (  /" << std::endl << "                  ) `{" << std::endl << "                  \\__)" << std::endl;
 	std::cout << std::endl << "*~WELCOME TO MY PHONEBOOK!~*" << std::endl;
-	while (i)
+	while (i == 1)
 	{
 		std::cout << "Please enter ADD to add a contact, SEARCH to search for a contact, or EXIT to exit\n" << std::endl;
 		getline(std::cin, input);
@@ -28,6 +28,8 @@ int main()
 			my_phonebook.search_contact();
 		else if (input == "ADD")
 			my_phonebook.add();
+		else
+			std::cout << "Invalid input, please try again!" << std::endl;
 
 	}
 	std::cout << "Bye." << std::endl;
