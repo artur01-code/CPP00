@@ -23,8 +23,8 @@ void PhoneBook::search_contact()
 	}
 	else
 	{
-		std::cout <<"|    INDEX |      NAME|   SIRNAME|       AGE|   PASSION|" << std::endl;
-		std::cout << "i: " << i << std::endl << "num: " << num_contacts << std::endl;
+		std::cout <<"|    INDEX |      NAME|   SIRNAME|  NICKNAME|" << std::endl;
+		//std::cout << "i: " << i << std::endl << "num: " << num_contacts << std::endl;
 		while (i < 8)
 		{
 			_contacts[i].get_contact(i);
@@ -32,7 +32,7 @@ void PhoneBook::search_contact()
 		}
 		std::cout << std::endl << "For which one are you searching?" << std::endl;
 		std::cin >> input;
-		if (input <= num_contacts - 1)
+		if (input <= num_contacts)
 			_contacts[input].get_info();
 		else
 			std::cout << "Wrong input. Please enter a valid index." << std::endl;
@@ -52,7 +52,7 @@ void PhoneBook::add()
 	std::cout << "Contact saved!\n\n";
 }
 
-void PhoneBook::set_contact(std::string name, std::string sirname, int age, std::string passion)
+void PhoneBook::set_contact(std::string name, std::string sirname, std::string nickname, std::string phonenumber, std::string secret)
 {
 	int i;
 
@@ -61,7 +61,8 @@ void PhoneBook::set_contact(std::string name, std::string sirname, int age, std:
 		i++;
 	_contacts[i].set_name(name);
 	_contacts[i].set_sirname(sirname);
-	_contacts[i].set_age(age);
-	_contacts[i].set_passion(passion);
+	_contacts[i].set_nickname(nickname);
+	_contacts[i].set_phonenumber(phonenumber);
+	_contacts[i].set_secret(secret);
 	set_num_contacts();
 }

@@ -14,8 +14,9 @@ public:
 private:
 	std::string name;
 	std::string sirname;
-	int age;
-	std::string passion;
+	std::string nickname;
+	std::string phonenumber;
+	std::string secret;
 
 	//methods
 public:
@@ -23,10 +24,12 @@ public:
 	bool set_name(std::string new_name) {name = new_name; return (true);}
 	std::string get_sirname() {return (sirname);}
 	bool set_sirname(std::string new_sirname) {sirname = new_sirname; return (true);}
-	int get_age() {return (age);}
-	bool set_age(int new_age) {age = new_age; return (true);}
-	std::string get_passion() {return (passion);}
-	bool set_passion(std::string new_passion) {passion = new_passion; return (true);}
+	std::string get_nickname() {return (nickname);}
+	bool set_nickname(std::string new_nickname) {nickname = new_nickname; return (true);};
+	std::string get_phonenumber() {return (phonenumber);}
+	bool set_phonenumber(std::string new_phonenumber) {phonenumber =  new_phonenumber; return (true);}
+	std::string get_secret() {return (secret);}
+	bool set_secret(std::string new_secret) {secret = new_secret; return (true);}
 	void get_contact(int i);
 	void get_info();
 	void set_contact();

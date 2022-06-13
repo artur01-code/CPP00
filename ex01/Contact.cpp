@@ -24,21 +24,30 @@ void Contact::get_contact(int i)
 		std::cout << this->get_sirname().substr(0, 9) << ".|";
 	else
 		std::cout << std::setw(10) << this->get_sirname() << "|";
-	//age
-	std::cout << std::setw(10) << this->get_age() << "|";
-	//passion
-	if (this->get_passion().size() > 10)
-		std::cout << this->get_passion().substr(0, 9) << ".|" << std::endl;
+	//nickname
+	if (this->get_nickname().size() > 10)
+		std::cout << this->get_nickname().substr(0, 9) << ".|" << std::endl;
 	else
-		std::cout << std::setw(10) << this->get_passion() << "|" << std::endl;
+		std::cout << std::setw(10) << this->get_nickname() << "|" << std::endl;
+	// //phonenumber
+	// if (this->get_phonenumber().size() > 10)
+	// 	std::cout << this->get_phonenumber().substr(0, 9) << ".|";
+	// else
+	// 	std::cout << std::setw(10) << this->get_phonenumber() << "|";
+	// //secret
+	// if (this->get_secret().size() > 10)
+	// 	std::cout << this->get_secret().substr(0, 9) << ".|";
+	// else
+	// 	std::cout << std::setw(10) << this->get_secret() << "|";
 }
 
 void Contact::get_info()
 {
 	std::cout << std::endl << "FIRSTNAME: " << this->get_name() << std::endl;
 	std::cout << "SIRNAME: " << this->get_sirname() << std::endl;
-	std::cout << "AGE: " << this->get_age() << std::endl;
-	std::cout << "PASSION: " << this->get_passion() << std::endl << std::endl;
+	std::cout << "NICKNAME: " << this->get_nickname() << std::endl;
+	std::cout << "PHONENUMBER: " << this->get_phonenumber() << std::endl;
+	std::cout << "DARKEST SECRET: " << this->get_secret() << std::endl << std::endl;
 }
 
 void Contact::set_contact()
@@ -51,10 +60,14 @@ void Contact::set_contact()
 	std::cout << "SIRNAME:";
 	std::cin >> input;
 	this->set_sirname(input);
-	std::cout << "AGE:";
+	std::cout << "NICKNAME:";
 	std::cin >> input;
-	this->set_age(std::stoi(input));
-	std::cout << "PASSION:";
+	this->set_nickname(input);
+	std::cout << "PHONENUMBER:";
 	std::cin >> input;
-	this->set_passion(input);
+	this->set_phonenumber(input);
+	std::cout << "DARKEST SECRET:";
+	std::cin >> input;
+	this->set_secret(input);
+
 }

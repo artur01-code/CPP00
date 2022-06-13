@@ -19,7 +19,7 @@ public:
 	Contact get_contact(int i) {return (_contacts[i]);}
 	void set_num_contacts() {num_contacts += 1;}
 	void search_contact();
-	void set_contact(std::string name, std::string sirname, int age, std::string passion);
+	void set_contact(std::string name, std::string sirname, std::string nickname, std::string phonenumber, std::string secret);
 	void add();
 };
 
