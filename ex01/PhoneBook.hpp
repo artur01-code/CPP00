@@ -18,7 +18,7 @@ private:
 public:
 	Contact get_contact(int i) {return (_contacts[i]);}
 	void set_num_contacts() {num_contacts += 1;}
-	void print_contacts();
+	void search_contact();
 	void set_contact(std::string name, std::string sirname, int age, std::string passion);
 };
 
