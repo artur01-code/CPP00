@@ -14,6 +14,7 @@ PhoneBook::~PhoneBook()
 void PhoneBook::search_contact()
 {
 	int i;
+	int input;
 
 	i = 0;
 	if (num_contacts == 0)
@@ -22,12 +23,33 @@ void PhoneBook::search_contact()
 	}
 	else
 	{
-		std::cout << "| ID | NAME | SIRNAME | AGE | PASSION |" << std::endl;
-		while (i < num_contacts)
+		std::cout <<"|    INDEX |      NAME|   SIRNAME|       AGE|   PASSION|" << std::endl;
+		std::cout << "i: " << i << std::endl << "num: " << num_contacts << std::endl;
+		while (i < 8)
 		{
-			//_contacts[i].get_contact();
+			_contacts[i].get_contact(i);
+			i++;
 		}
+		std::cout << std::endl << "For which one are you searching?" << std::endl;
+		std::cin >> input;
+		if (input <= num_contacts - 1)
+			_contacts[input].get_info();
+		else
+			std::cout << "Wrong input. Please enter a valid index." << std::endl;
+
 	}
+}
+
+void PhoneBook::add()
+{
+	int i;
+
+	num_contacts++;
+	i = num_contacts;
+	if (num_contacts > 8)
+		i = num_contacts % 8;
+	_contacts[i - 1].set_contact();
+	std::cout << "Contact saved!\n\n";
 }
 
 void PhoneBook::set_contact(std::string name, std::string sirname, int age, std::string passion)

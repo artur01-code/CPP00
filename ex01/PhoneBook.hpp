@@ -20,6 +20,7 @@ public:
 	void set_num_contacts() {num_contacts += 1;}
 	void search_contact();
 	void set_contact(std::string name, std::string sirname, int age, std::string passion);
+	void add();
 };
 
 #endif
