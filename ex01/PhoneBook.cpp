@@ -1,4 +1,6 @@
 #include "PhoneBook.hpp"
+#include <stdlib.h>     /* atoi */
+
 
 PhoneBook::PhoneBook()
 {
