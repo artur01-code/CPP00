@@ -17,31 +17,25 @@ void PhoneBook::search_contact()
 
 	i = 0;
 	if (num_contacts == 0)
-	{
 		std::cout << "Phonebook is empty." << std::endl << "       __   __\n      /  \\./  \\/\\_\n  __{^\\_ _}_   )  }/^\\n /  /\\_/^\\._}_/  //  /\n(  (__{(@)}\\__}.//_/__A____A_______A________A________A_____A___A___A______\n \\__/{/(_)\\_}  )\\ \\---v-----V-----V---Y-----v----Y------v-----V-----v---\n   (   (__)_)_/  )\\ \\>\n    \\__/     \\__/\\/\\/\n       \\__,--'" << std::endl;
-	}
-	else
+	std::cout <<"|    INDEX |      NAME|   SIRNAME|  NICKNAME|" << std::endl;
+	while (i < 8)
 	{
-		std::cout <<"|    INDEX |      NAME|   SIRNAME|  NICKNAME|" << std::endl;
-		while (i < 8)
+		_contacts[i].get_contact(i);
+		i++;
+	}
+	i = 1;
+	while (i == 1)
+	{
+		std::cout << std::endl << "For which one are you searching?" << std::endl;
+		std::cin >> input;
+		if (input <= num_contacts - 1)
 		{
-			_contacts[i].get_contact(i);
-			i++;
+			_contacts[input].get_info();
+			i = 0;
 		}
-		i = 1;
-		while (i == 1)
-		{
-			std::cout << std::endl << "For which one are you searching?" << std::endl;
-			std::cin >> input;
-			if (input <= num_contacts - 1)
-			{
-				_contacts[input].get_info();
-				i = 0;
-			}
-			else
-				std::cout << "Wrong input. Please enter a valid index." << std::endl;
-		}
-
+		else
+			std::cout << "Wrong input. Please enter a valid index." << std::endl;
 	}
 }
 

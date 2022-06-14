@@ -12,19 +12,15 @@ Contact::~Contact()
 
 void Contact::get_contact(int i)
 {
-	//index
 	std::cout << "|" << std::setw(10) << i << "|";
-	//name
 	if (this->get_name().size() > 10)
 		std::cout << this->get_name().substr(0, 9) << ".|";
 	else
 		std::cout << std::setw(10) << this->get_name() << "|";
-	//sirname
 	if (this->get_sirname().size() > 10)
 		std::cout << this->get_sirname().substr(0, 9) << ".|";
 	else
 		std::cout << std::setw(10) << this->get_sirname() << "|";
-	//nickname
 	if (this->get_nickname().size() > 10)
 		std::cout << this->get_nickname().substr(0, 9) << ".|" << std::endl;
 	else

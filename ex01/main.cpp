@@ -4,8 +4,8 @@
 int main()
 {
 	int i = 1;
-	class PhoneBook my_phonebook;
 	std::string input;
+	class PhoneBook my_phonebook;
 
 	my_phonebook.set_contact("Jorit", "Tomala", "jtomala", "012345678", "stinkt im dunkeln");
 	my_phonebook.set_contact("Max", "Mustermann", "jajaja", "45678987654", "lesen, schreiben, gucken, tanzen");
@@ -30,7 +30,6 @@ int main()
 			my_phonebook.add();
 		else
 			std::cout << "Invalid input, please try again!" << std::endl;
-
 	}
 	std::cout << "Bye." << std::endl;
 }
