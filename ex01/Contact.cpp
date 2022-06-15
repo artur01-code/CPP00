@@ -41,7 +41,7 @@ void Contact::set_contact()
 	std::string input;
 
 	std::cout << "FIRSTNAME:";
-	std::cin >> input;
+	std::cin >> input; 
 	this->set_name(input);
 	std::cout << "SIRNAME:";
 	std::cin >> input;
@@ -55,5 +55,4 @@ void Contact::set_contact()
 	std::cout << "DARKEST SECRET:";
 	std::cin >> input;
 	this->set_secret(input);
-
 }
